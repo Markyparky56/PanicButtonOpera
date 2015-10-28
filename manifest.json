@@ -3,7 +3,7 @@
     
     "name":                 "NoFap Panic Button",
     "description":          "Provides browser version of the NoFap Emergency Relpase Prevention Tool",
-    "version":              "0.1.4",
+    "version":              "1.0.0",
     "options_page":         "options.html",
     
     "icons":{
