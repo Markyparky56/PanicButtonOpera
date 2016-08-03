@@ -3,7 +3,7 @@
 
     "name":                 "NoFap Panic Button",
     "description":          "Provides browser version of the NoFap Emergency Relapse Prevention Tool",
-    "version":              "1.0.2",
+    "version":              "1.0.3",
     "options_page":         "options.html",
 
     "icons":{
@@ -20,7 +20,17 @@
     },
 
     "permissions":[
-        "storage"
+        "activeTab",
+        "storage",
+        "https://*.reddit.com/r/*"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["https://*.reddit.com/r/*"],
+            "js": ["jquery-2.1.4.min.js", "nsfwguard.js"],
+            "run_at" : "document_start"
+        }
     ],
 
     "content_security_policy":  "script-src 'self' https://www.google-analytics.com/analytics.js; object-src 'self'"
