@@ -35,5 +35,13 @@
     "popupbox.html"
   ],
 
+  "content_scripts": [        
+    {
+      "matches": ["*://*/*"],
+      "js": ["popupbox.js"],
+      "run_at" : "document_end"
+    }
+  ],
+
   "content_security_policy":  "script-src 'self'; object-src 'self'"
 }
